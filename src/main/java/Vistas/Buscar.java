@@ -33,14 +33,14 @@ public class Buscar extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        Actualizar = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
         jTextField3 = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        Atras = new javax.swing.JButton();
+        Salir = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
 
         jPasswordField1.setText("jPasswordField1");
@@ -64,9 +64,10 @@ public class Buscar extends javax.swing.JFrame {
         jButton1.setText("EXPORTAR");
         jButton1.addActionListener(this::jButton1ActionPerformed);
 
-        jButton2.setBackground(new java.awt.Color(199, 173, 134));
-        jButton2.setForeground(new java.awt.Color(14, 47, 68));
-        jButton2.setText("ACTUAIZAR");
+        Actualizar.setBackground(new java.awt.Color(199, 173, 134));
+        Actualizar.setForeground(new java.awt.Color(14, 47, 68));
+        Actualizar.setText("ACTUAIZAR");
+        Actualizar.addActionListener(this::ActualizarActionPerformed);
 
         jLabel4.setForeground(new java.awt.Color(251, 247, 241));
         jLabel4.setText("Codigo");
@@ -80,6 +81,7 @@ public class Buscar extends javax.swing.JFrame {
         jTextField3.setPreferredSize(new java.awt.Dimension(32, 29));
 
         jTable1.setBackground(new java.awt.Color(37, 109, 133));
+        jTable1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -93,13 +95,15 @@ public class Buscar extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        jButton3.setBackground(new java.awt.Color(199, 173, 134));
-        jButton3.setForeground(new java.awt.Color(14, 47, 68));
-        jButton3.setText("ATRAS");
+        Atras.setBackground(new java.awt.Color(199, 173, 134));
+        Atras.setForeground(new java.awt.Color(14, 47, 68));
+        Atras.setText("ATRAS");
+        Atras.addActionListener(this::AtrasActionPerformed);
 
-        jButton4.setBackground(new java.awt.Color(199, 173, 134));
-        jButton4.setForeground(new java.awt.Color(14, 47, 68));
-        jButton4.setText("SALIR");
+        Salir.setBackground(new java.awt.Color(199, 173, 134));
+        Salir.setForeground(new java.awt.Color(14, 47, 68));
+        Salir.setText("SALIR");
+        Salir.addActionListener(this::SalirActionPerformed);
 
         jButton5.setBackground(new java.awt.Color(199, 173, 134));
         jButton5.setForeground(new java.awt.Color(14, 47, 68));
@@ -131,11 +135,11 @@ public class Buscar extends javax.swing.JFrame {
                         .addGap(12, 12, 12)
                         .addComponent(jButton1)
                         .addGap(63, 63, 63)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(Actualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(Atras, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(61, 61, 61)
-                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(Salir, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(16, 16, 16)))
                 .addGap(25, 25, 25))
         );
@@ -156,9 +160,9 @@ public class Buscar extends javax.swing.JFrame {
                 .addGap(31, 31, 31)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3)
-                    .addComponent(jButton4))
+                    .addComponent(Actualizar)
+                    .addComponent(Atras)
+                    .addComponent(Salir))
                 .addContainerGap(25, Short.MAX_VALUE))
         );
 
@@ -184,6 +188,23 @@ public class Buscar extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void ActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ActualizarActionPerformed
+        // TODO add your handling code here:
+        new Registrar().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_ActualizarActionPerformed
+
+    private void AtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AtrasActionPerformed
+        // TODO add your handling code here:
+        new Menu().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_AtrasActionPerformed
+
+    private void SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirActionPerformed
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_SalirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -211,10 +232,10 @@ public class Buscar extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Actualizar;
+    private javax.swing.JButton Atras;
+    private javax.swing.JButton Salir;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;

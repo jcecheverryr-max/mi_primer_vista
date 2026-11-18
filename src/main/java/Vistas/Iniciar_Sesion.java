@@ -34,8 +34,8 @@ public class Iniciar_Sesion extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        Entrar = new javax.swing.JButton();
+        Salir = new javax.swing.JButton();
         jPasswordField2 = new javax.swing.JPasswordField();
 
         jPasswordField1.setText("jPasswordField1");
@@ -62,14 +62,15 @@ public class Iniciar_Sesion extends javax.swing.JFrame {
         jTextField1.setText("usuario");
         jTextField1.setPreferredSize(new java.awt.Dimension(32, 29));
 
-        jButton1.setBackground(new java.awt.Color(199, 173, 134));
-        jButton1.setForeground(new java.awt.Color(14, 47, 68));
-        jButton1.setText("ENTRAR");
-        jButton1.addActionListener(this::jButton1ActionPerformed);
+        Entrar.setBackground(new java.awt.Color(199, 173, 134));
+        Entrar.setForeground(new java.awt.Color(14, 47, 68));
+        Entrar.setText("ENTRAR");
+        Entrar.addActionListener(this::EntrarActionPerformed);
 
-        jButton2.setBackground(new java.awt.Color(199, 173, 134));
-        jButton2.setForeground(new java.awt.Color(14, 47, 68));
-        jButton2.setText("SALIR");
+        Salir.setBackground(new java.awt.Color(199, 173, 134));
+        Salir.setForeground(new java.awt.Color(14, 47, 68));
+        Salir.setText("SALIR");
+        Salir.addActionListener(this::SalirActionPerformed);
 
         jPasswordField2.setBackground(new java.awt.Color(37, 109, 133));
         jPasswordField2.setForeground(new java.awt.Color(251, 247, 241));
@@ -82,9 +83,9 @@ public class Iniciar_Sesion extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(48, 48, 48)
-                .addComponent(jButton1)
+                .addComponent(Entrar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Salir, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(54, 54, 54))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(30, 30, 30)
@@ -116,8 +117,8 @@ public class Iniciar_Sesion extends javax.swing.JFrame {
                     .addComponent(jPasswordField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(49, 49, 49)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(Entrar)
+                    .addComponent(Salir))
                 .addContainerGap(44, Short.MAX_VALUE))
         );
 
@@ -139,13 +140,20 @@ public class Iniciar_Sesion extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void EntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EntrarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
-
+        new Menu().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_EntrarActionPerformed
+        
     private void jPasswordField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jPasswordField2ActionPerformed
+
+    private void SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirActionPerformed
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_SalirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -171,10 +179,11 @@ public class Iniciar_Sesion extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> new Iniciar_Sesion().setVisible(true));
     }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton Entrar;
+    private javax.swing.JButton Salir;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -183,4 +192,6 @@ public class Iniciar_Sesion extends javax.swing.JFrame {
     private javax.swing.JPasswordField jPasswordField2;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
+    
+
 }

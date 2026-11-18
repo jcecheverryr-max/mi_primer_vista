@@ -31,12 +31,12 @@ public class Menu extends javax.swing.JFrame {
         jPasswordField1 = new javax.swing.JPasswordField();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
+        Importar = new javax.swing.JButton();
+        Salir = new javax.swing.JButton();
+        Registrar = new javax.swing.JButton();
+        Buscar = new javax.swing.JButton();
+        Actualizar = new javax.swing.JButton();
+        Exportar = new javax.swing.JButton();
 
         jPasswordField1.setText("jPasswordField1");
 
@@ -51,34 +51,35 @@ public class Menu extends javax.swing.JFrame {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("BIENVENIDO");
 
-        jButton1.setBackground(new java.awt.Color(199, 173, 134));
-        jButton1.setForeground(new java.awt.Color(14, 47, 68));
-        jButton1.setText("IMPORTAR");
-        jButton1.addActionListener(this::jButton1ActionPerformed);
+        Importar.setBackground(new java.awt.Color(199, 173, 134));
+        Importar.setForeground(new java.awt.Color(14, 47, 68));
+        Importar.setText("IMPORTAR");
+        Importar.addActionListener(this::ImportarActionPerformed);
 
-        jButton2.setBackground(new java.awt.Color(199, 173, 134));
-        jButton2.setForeground(new java.awt.Color(14, 47, 68));
-        jButton2.setText("SALIR");
+        Salir.setBackground(new java.awt.Color(199, 173, 134));
+        Salir.setForeground(new java.awt.Color(14, 47, 68));
+        Salir.setText("SALIR");
+        Salir.addActionListener(this::SalirActionPerformed);
 
-        jButton3.setBackground(new java.awt.Color(199, 173, 134));
-        jButton3.setForeground(new java.awt.Color(14, 47, 68));
-        jButton3.setText("REGISTRAR");
-        jButton3.addActionListener(this::jButton3ActionPerformed);
+        Registrar.setBackground(new java.awt.Color(199, 173, 134));
+        Registrar.setForeground(new java.awt.Color(14, 47, 68));
+        Registrar.setText("REGISTRAR");
+        Registrar.addActionListener(this::RegistrarActionPerformed);
 
-        jButton4.setBackground(new java.awt.Color(199, 173, 134));
-        jButton4.setForeground(new java.awt.Color(14, 47, 68));
-        jButton4.setText("BUSCAR");
-        jButton4.addActionListener(this::jButton4ActionPerformed);
+        Buscar.setBackground(new java.awt.Color(199, 173, 134));
+        Buscar.setForeground(new java.awt.Color(14, 47, 68));
+        Buscar.setText("BUSCAR");
+        Buscar.addActionListener(this::BuscarActionPerformed);
 
-        jButton5.setBackground(new java.awt.Color(199, 173, 134));
-        jButton5.setForeground(new java.awt.Color(14, 47, 68));
-        jButton5.setText("ACTUALIZAR");
-        jButton5.addActionListener(this::jButton5ActionPerformed);
+        Actualizar.setBackground(new java.awt.Color(199, 173, 134));
+        Actualizar.setForeground(new java.awt.Color(14, 47, 68));
+        Actualizar.setText("ACTUALIZAR");
+        Actualizar.addActionListener(this::ActualizarActionPerformed);
 
-        jButton6.setBackground(new java.awt.Color(199, 173, 134));
-        jButton6.setForeground(new java.awt.Color(14, 47, 68));
-        jButton6.setText("EXPORTAR");
-        jButton6.addActionListener(this::jButton6ActionPerformed);
+        Exportar.setBackground(new java.awt.Color(199, 173, 134));
+        Exportar.setForeground(new java.awt.Color(14, 47, 68));
+        Exportar.setText("EXPORTAR");
+        Exportar.addActionListener(this::ExportarActionPerformed);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -87,14 +88,14 @@ public class Menu extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(48, 48, 48)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(Actualizar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Importar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Registrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(Exportar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Buscar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Salir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(52, 52, 52))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(104, 104, 104)
@@ -108,16 +109,16 @@ public class Menu extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addGap(49, 49, 49)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton3)
-                    .addComponent(jButton4))
+                    .addComponent(Registrar)
+                    .addComponent(Buscar))
                 .addGap(30, 30, 30)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton5)
-                    .addComponent(jButton6))
+                    .addComponent(Actualizar)
+                    .addComponent(Exportar))
                 .addGap(33, 33, 33)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(Importar)
+                    .addComponent(Salir))
                 .addContainerGap(76, Short.MAX_VALUE))
         );
 
@@ -137,25 +138,38 @@ public class Menu extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void ImportarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ImportarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_ImportarActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void RegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+        new Registrar().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_RegistrarActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void BuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+        new Buscar().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_BuscarActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void ActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ActualizarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5ActionPerformed
+        new Buscar().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_ActualizarActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    private void ExportarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExportarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton6ActionPerformed
+        new Buscar().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_ExportarActionPerformed
+
+    private void SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirActionPerformed
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_SalirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -183,12 +197,12 @@ public class Menu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
+    private javax.swing.JButton Actualizar;
+    private javax.swing.JButton Buscar;
+    private javax.swing.JButton Exportar;
+    private javax.swing.JButton Importar;
+    private javax.swing.JButton Registrar;
+    private javax.swing.JButton Salir;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPasswordField jPasswordField1;
