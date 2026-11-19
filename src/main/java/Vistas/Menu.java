@@ -144,7 +144,7 @@ public class Menu extends javax.swing.JFrame {
 
     private void RegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarActionPerformed
         // TODO add your handling code here:
-        new Registrar().setVisible(true);
+        new Opcion_Registrar().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_RegistrarActionPerformed
 

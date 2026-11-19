@@ -3,6 +3,7 @@
  */
 
 package com.proyect.huellero;
+import javax.swing.SwingUtilities;
 
 /**
  *
@@ -11,6 +12,12 @@ package com.proyect.huellero;
 public class Huellero {
 
     public static void main(String[] args) {
+        
+        SwingUtilities.invokeLater(() -> {
+        Vistas.Iniciar_Sesion ventana = new Vistas.Iniciar_Sesion();
+        ventana.setVisible(true);
+        });
+        
         System.out.println("Hello World!");
     }
 }

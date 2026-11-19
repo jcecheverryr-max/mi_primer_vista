@@ -33,10 +33,10 @@ public class Iniciar_Sesion extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        User = new javax.swing.JTextField();
         Entrar = new javax.swing.JButton();
         Salir = new javax.swing.JButton();
-        jPasswordField2 = new javax.swing.JPasswordField();
+        Contra = new javax.swing.JPasswordField();
 
         jPasswordField1.setText("jPasswordField1");
 
@@ -57,10 +57,10 @@ public class Iniciar_Sesion extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(251, 247, 241));
         jLabel3.setText("Contraseña");
 
-        jTextField1.setBackground(new java.awt.Color(37, 109, 133));
-        jTextField1.setForeground(new java.awt.Color(251, 247, 241));
-        jTextField1.setText("usuario");
-        jTextField1.setPreferredSize(new java.awt.Dimension(32, 29));
+        User.setBackground(new java.awt.Color(37, 109, 133));
+        User.setForeground(new java.awt.Color(251, 247, 241));
+        User.setText("usuario");
+        User.setPreferredSize(new java.awt.Dimension(32, 29));
 
         Entrar.setBackground(new java.awt.Color(199, 173, 134));
         Entrar.setForeground(new java.awt.Color(14, 47, 68));
@@ -72,10 +72,10 @@ public class Iniciar_Sesion extends javax.swing.JFrame {
         Salir.setText("SALIR");
         Salir.addActionListener(this::SalirActionPerformed);
 
-        jPasswordField2.setBackground(new java.awt.Color(37, 109, 133));
-        jPasswordField2.setForeground(new java.awt.Color(251, 247, 241));
-        jPasswordField2.setText("jPasswordField2");
-        jPasswordField2.addActionListener(this::jPasswordField2ActionPerformed);
+        Contra.setBackground(new java.awt.Color(37, 109, 133));
+        Contra.setForeground(new java.awt.Color(251, 247, 241));
+        Contra.setText("jPasswordField2");
+        Contra.addActionListener(this::ContraActionPerformed);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -95,11 +95,11 @@ public class Iniciar_Sesion extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createSequentialGroup()
                             .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(53, 53, 53)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(User, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(jPanel1Layout.createSequentialGroup()
                             .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(27, 27, 27)
-                            .addComponent(jPasswordField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(Contra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(32, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -109,12 +109,12 @@ public class Iniciar_Sesion extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addGap(42, 42, 42)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(User, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
                 .addGap(22, 22, 22)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(jPasswordField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Contra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(49, 49, 49)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Entrar)
@@ -142,13 +142,24 @@ public class Iniciar_Sesion extends javax.swing.JFrame {
 
     private void EntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EntrarActionPerformed
         // TODO add your handling code here:
+        
+        String usuario = User.getText();
+        String contra = Contra.getText();
+        
+        if (usuario.equals("pepito") && contra.equals("0123")){
         new Menu().setVisible(true);
         this.dispose();
+        }else {
+        
+            new Malas_Credenciales().setVisible(true);
+            this.dispose();
+        
+        }
     }//GEN-LAST:event_EntrarActionPerformed
         
-    private void jPasswordField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField2ActionPerformed
+    private void ContraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ContraActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jPasswordField2ActionPerformed
+    }//GEN-LAST:event_ContraActionPerformed
 
     private void SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirActionPerformed
         // TODO add your handling code here:
@@ -182,15 +193,15 @@ public class Iniciar_Sesion extends javax.swing.JFrame {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPasswordField Contra;
     private javax.swing.JButton Entrar;
     private javax.swing.JButton Salir;
+    private javax.swing.JTextField User;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JPasswordField jPasswordField2;
-    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
     
 
